@@ -1,23 +1,16 @@
-<header class="container mt-1">
+<header class="container-fluid mt-1">
     <p>This app use the following concepts and technologies:</p>
     <ul>
         <li>HTML, CCS, <a href="https://getbootstrap.com/">Bootstrap v5.1.3</a></li>
         <li>Angular 13.2.6</li>
         <li>Countinuos deployment usint GitHub and <a href="https://www.netlify.com/">Netlify</a></li>
-        <li>The source code is on <a href="https://github.com/derwing/gifs-app">GitHub Repo</a></li>
+        <li>The source code is in the following public repository <a href="https://github.com/derwing/gifsApp">GitHub Repo</a></li>
+        <li><a href="https://giphy.com/">Giphy API</a> as gifs provider</li>
     </ul>
     <hr class="text-primary">
 </header>
 <div class="d-flex">
     <app-sidebar></app-sidebar>
     <!-- end sidebar -->
-    <div class="container">
-        <div class="row p-3">
-            <div class="col">
-                <h5>Search:</h5>
-                <input type="text" name="" id="search" class="form-control" placeholder="Search gifs">
-            </div>
-        </div>
-        <hr> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, hic in! Recusandae asperiores nostrum ea beatae quos tenetur quidem quibusdam earum possimus, cupiditate nobis saepe expedita natus nihil accusantium odit!
-    </div>
+    <app-gifs-page class="container-fluid"></app-gifs-page>
 </div>
