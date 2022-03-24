@@ -25,3 +25,11 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## This app use the following concepts and technologies:</p>
+
+    HTML, CCS, [Bootstrap v5.1.3](https://getbootstrap.com/)
+    Angular 13.2.6
+    Countinuos deployment usint GitHub and [Netlify](https://www.netlify.com/)
+    The source code is in the following public repository [GitHub Repo](https://github.com/derwing/gifsApp)
+    [Giphy API](https://giphy.com/) as gifs provider
