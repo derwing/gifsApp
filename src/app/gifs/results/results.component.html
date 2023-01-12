@@ -18,13 +18,13 @@
                 <span *ngIf="word.pronunciations" class="text-secondary fw-bold">Pronunciations UK: </span>
                 <span *ngFor="let pronunciation of word.pronunciations | slice:2:4"> {{pronunciation.transcriptions[0].transcription }} </span>
                 <br>
-                <div *ngIf="word.pronunciations[0].audio?.url || word.pronunciations[1].audio?.url || word.pronunciations[3].audio?.url || word.pronunciations[4].audio?.url">
+                <!-- <div *ngIf="word.pronunciations[0].audio?.url || word.pronunciations[1].audio?.url || word.pronunciations[3].audio?.url || word.pronunciations[4].audio?.url">
                     <span>Audio pronunciations:</span>
                     <div *ngFor="let audio of word.pronunciations | slice:0:4;">
                         <audio *ngIf="audio.audio?.url" controls [src]="audio.audio?.url" type="audio/mp3"></audio>
                         <audio *ngIf="audio.audio?.url" controls [src]="audio.audio?.url" type="audio/mp3"></audio>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
