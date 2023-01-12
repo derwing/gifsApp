@@ -1,1 +1,45 @@
-<p>results works!</p>
+<!-- <ul>
+    <li *ngFor="let gift of result">
+        <img [src]="gift.images.downsized_medium.url" alt="{{gift.title}}">
+        <span>{{gift.title}}</span>
+    </li>
+</ul> -->
+
+<div class="row">
+    <div class="col">
+        <div class="card" *ngFor="let word of resultWords | slice:0:1;" style="width: 30rem;">
+            <div class="card-body">
+                <p class="text-primary fw-bold">Term: {{word.entry | uppercase}}</p>
+                <span *ngFor="let number of word.interpretations[0].grammar | slice:0:1;">Gramatical Number: {{number.number | json | titlecase}} </span>
+                <br>
+                <span *ngIf="word.pronunciations" class="text-secondary fw-bold">Pronunciations US: </span>
+                <span *ngFor="let pronunciation of word.pronunciations | slice:0:2;"> {{pronunciation.transcriptions[0].transcription }} </span>
+                <br>
+                <span *ngIf="word.pronunciations" class="text-secondary fw-bold">Pronunciations UK: </span>
+                <span *ngFor="let pronunciation of word.pronunciations | slice:2:4"> {{pronunciation.transcriptions[0].transcription }} </span>
+                <br>
+                <div *ngIf="word.pronunciations[0].audio?.url || word.pronunciations[1].audio?.url || word.pronunciations[3].audio?.url || word.pronunciations[4].audio?.url">
+                    <span>Audio pronunciations:</span>
+                    <div *ngFor="let audio of word.pronunciations | slice:0:4;">
+                        <audio *ngIf="audio.audio?.url" controls [src]="audio.audio?.url" type="audio/mp3"></audio>
+                        <audio *ngIf="audio.audio?.url" controls [src]="audio.audio?.url" type="audio/mp3"></audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-2">
+    <p>Mnemonic Reminder:</p>
+    <div *ngFor="let gif of result" class="col-md-3 col-sm-6 mb-1 me-1">
+        <div class="card" style="width: 18rem;">
+            <img [src]="gif.images.downsized_medium.url" class="card-img-top" style="max-height: 160px;">
+            <div class="card-body">
+                <p class="card-text">
+                    <!-- {{gif.title}} -->
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

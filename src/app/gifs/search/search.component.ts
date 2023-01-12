@@ -17,13 +17,13 @@ export class SearchComponent {
 
 
   search() {
-    const value = this.term.nativeElement.value.trim();
+    let value = this.term.nativeElement.value.trim().split(' ');
 
-    if (value.trim().length === 0) {
+    if (value.length === 0) {
       return;
     }
 
-    this.GifsService.searchGifs(value);
+    this.GifsService.searchGifs(value[0]);
 
     this.term.nativeElement.value = '';
   }
